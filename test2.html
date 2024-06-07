@@ -1,0 +1,190 @@
+<style>
+    /* accordion */
+
+
+    .template_faq {
+        background: #edf3fe none repeat scroll 0 0;
+    }
+
+    #accordion .panel {
+        border: medium none;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0 0 15px 10px;
+        overflow: visible;
+    }
+
+    #accordion .panel-heading {
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    #accordion .panel-title a {
+        background: #03818d none repeat scroll 0 0;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 20px 12px 50px;
+        position: relative;
+        transition: all 0.3s ease 0s;
+    }
+
+    #accordion .panel-title a.collapsed {
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid #ddd;
+        color: #333;
+    }
+
+    #accordion .panel-title a::after,
+    #accordion .panel-title a.collapsed::after {
+        background: #03818d none repeat scroll 0 0;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+        color: #fff;
+        content: "";
+        font-family: fontawesome;
+        font-size: 25px;
+        height: 55px;
+        left: -20px;
+        line-height: 55px;
+        position: absolute;
+        text-align: center;
+        top: -5px;
+        transition: all 0.3s ease 0s;
+        width: 55px;
+    }
+
+    #accordion .panel-title a.collapsed::after {
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        color: #333;
+        content: "";
+    }
+
+    #accordion .panel-body {
+        background: transparent none repeat scroll 0 0;
+        border-top: medium none;
+        padding: 20px 25px 10px 9px;
+        position: relative;
+    }
+
+    #accordion .panel-body p {
+        border-left: 1px dashed #8c8c8c;
+        padding-left: 25px;
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="col-md-3">
+    <div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+        <div class="panel panel-default">
+            <div class="panel-heading" id="headingOne" role="tab">
+                <h4 class="panel-title"><a aria-controls="collapseOne" aria-expanded="false" class="collapsed"
+                        data-parent="#accordion" data-toggle="collapse" href="#collapseOne" role="button">Psychology (F,
+                        P) </a></h4>
+            </div>
+
+            <div aria-labelledby="headingOne" class="panel-collapse collapse" id="collapseOne" role="tabpanel">
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
+                        pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac
+                        justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
+                        molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
+                        dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac,
+                        rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
+                        Curabitur molestie eros.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="headingTwo" role="tab">
+                <h4 class="panel-title"><a aria-controls="collapseTwo" aria-expanded="false" class="collapsed"
+                        data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" role="button">Law (F,P) </a>
+                </h4>
+            </div>
+
+            <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="collapseTwo" role="tabpanel">
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
+                        pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac
+                        justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
+                        molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
+                        dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac,
+                        rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
+                        Curabitur molestie eros.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="headingThree" role="tab">
+                <h4 class="panel-title"><a aria-controls="collapseThree" aria-expanded="false" class="collapsed"
+                        data-parent="#accordion" data-toggle="collapse" href="#collapseThree" role="button">Business
+                        Administration and Management (F, P D) </a></h4>
+            </div>
+
+            <div aria-labelledby="headingThree" class="panel-collapse collapse" id="collapseThree" role="tabpanel">
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
+                        pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac
+                        justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
+                        molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
+                        dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac,
+                        rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
+                        Curabitur molestie eros.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="headingFour" role="tab">
+                <h4 class="panel-title"><a aria-controls="collapseFour" aria-expanded="false" class="collapsed"
+                        data-parent="#accordion" data-toggle="collapse" href="#collapseFour" role="button">Public
+                        Administration and Management (D) </a></h4>
+            </div>
+
+            <div aria-labelledby="headingFour" class="panel-collapse collapse" id="collapseFour" role="tabpanel">
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
+                        pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac
+                        justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
+                        molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
+                        dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac,
+                        rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
+                        Curabitur molestie eros.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="headingFive" role="tab">
+                <h4 class="panel-title"><a aria-controls="collapseFive" aria-expanded="false" class="collapsed"
+                        data-parent="#accordion" data-toggle="collapse" href="#collapseFive" role="button">International
+                        Economic Relations (P, D) </a></h4>
+            </div>
+
+            <div aria-labelledby="headingFive" class="panel-collapse collapse" id="collapseFive" role="tabpanel">
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
+                        pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac
+                        justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
+                        molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
+                        dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac,
+                        rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
+                        Curabitur molestie eros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--- END COL -->
