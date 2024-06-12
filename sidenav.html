@@ -23,7 +23,6 @@
 
 #accordion .panel-title a {
     background: #03818d none repeat scroll 0 0;
-    /* border: 1px solid transparent; */
     color: #fff;
     display: block;
     font-size: 18px;
@@ -82,14 +81,17 @@
 #accordion .panel-body {
     background: transparent none repeat scroll 0 0;
     border-top: medium none;
-    padding: 10px 10px 0px 0px;
+    padding: 2px 0px 4px 0px;
     position: relative;
 }
 
 #accordion .panel-body p {
     position: relative;
+    padding: 5px 5px 0px 0px;
     padding-left: 12px;
+    margin: 0px;
     overflow: hidden; /* Ensure the effect stays within the bounds */
+    font-size: 16px;
 }
 
 #accordion .panel-body p::before {
@@ -107,8 +109,10 @@
     width: 5px;
 }
 
-
-
+/* Hide the arrow for the first panel heading */
+.no-arrow .panel-title a::after {
+    display: none;
+}
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -122,31 +126,12 @@
     <div class="col-md-3">
         <div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
             <div class="panel panel-default">
-                <div class="panel-heading" id="headingOne" role="tab">
+                <div class="panel-heading no-arrow" id="headingOne" role="tab">
                     <h4 class="panel-title"><a aria-controls="collapseOne" aria-expanded="false" class="collapsed"
-                            data-parent="#accordion" data-toggle="collapse" href="#collapseOne" role="button">Електронен каталог </a></h4>
-                </div>
-
-                <div aria-labelledby="headingOne" class="panel-collapse collapse" id="collapseOne" role="tabpanel">
-                    <div class="panel-body">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="panel-body">
-                        <p>Item 2</p>
-                    </div>
+                            data-parent="#accordion" data-toggle="collapse" href="#collapseOne" role="button">Електронен каталог</a></h4>
                 </div>
                 <div aria-labelledby="headingOne" class="panel-collapse collapse" id="collapseOne" role="tabpanel">
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
-                            pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum
-                            ac
-                            justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
-                            molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
-                            dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
-                            ac,
-                            rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
-                            Curabitur molestie eros.</p>
-                    </div>
+                    <!-- No content for sub-items -->
                 </div>
             </div>
 
@@ -160,15 +145,15 @@
 
                 <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="collapseTwo" role="tabpanel">
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
-                            pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum
-                            ac
-                            justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
-                            molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
-                            dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
-                            ac,
-                            rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
-                            Curabitur molestie eros.</p>
+                        <div class="panel-body">
+                            <p>Виртуален пътеводител</p>
+                        </div>
+                        <div class="panel-body">
+                            <p>Проверка дължими книги</p>
+                        </div>
+                        <div class="panel-body">
+                            <p>Абонамент</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,15 +166,13 @@
 
                 <div aria-labelledby="headingThree" class="panel-collapse collapse" id="collapseThree" role="tabpanel">
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
-                            pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum
-                            ac
-                            justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
-                            molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
-                            dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
-                            ac,
-                            rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
-                            Curabitur molestie eros.</p>
+                        <p>Последни новини</p>
+                    </div>
+                    <div class="panel-body">
+                        <p>Нови книги и статии</p>
+                    </div>
+                    <div class="panel-body">
+                        <p>Медиите за ВСУ</p>
                     </div>
                 </div>
             </div>
@@ -202,16 +185,18 @@
 
                 <div aria-labelledby="headingFour" class="panel-collapse collapse" id="collapseFour" role="tabpanel">
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id
-                            pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum
-                            ac
-                            justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur
-                            molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem,
-                            dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
-                            ac,
-                            rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae.
-                            Curabitur molestie eros.</p>
-                    </div>
+                        <div class="panel-body">
+                            <p>Справка за цитиранията на преподаватели от ВСУ</p>
+                        </div>
+                        <div class="panel-body">
+                            <p>Академични бази данни и периодика</p>
+                        </div>
+                        <div class="panel-body">
+                            <p>Книгообмен</p>
+                        </div>
+                        <div class="panel-body">
+                            <p>Дарители на библиотеката</p>
+                        </div>
                 </div>
             </div>
         </div>
